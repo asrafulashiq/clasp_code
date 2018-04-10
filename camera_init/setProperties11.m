@@ -43,7 +43,7 @@ R_11.R_people.people_array = {}; % current people info
 R_11.R_people.label = 1; % people label
 
 % set initial people detector properties
-R_11.R_people.min_allowed_dis = 200 * scale;
+R_11.R_people.min_allowed_dis = 250 * scale;
 R_11.R_people.limit_area = 8000 * 4 * scale^2;
 R_11.R_people.limit_area_med = 12000 * 4 *scale^2;
 R_11.R_people.limit_init_area = 15000 * 4 *  scale^2;
@@ -57,7 +57,7 @@ R_11.R_people.limit_exit_x2 = 220 * scale;
 R_11.R_people.limit_init_y = 950 * scale;
 R_11.R_people.limit_init_x = 300 * scale;
 
-R_11.R_people.limit_exit_y = 820 * 2 * scale;
+R_11.R_people.limit_exit_y = 800 * 2 * scale;
 R_11.R_people.limit_exit_x = 2 * scale;
 R_11.R_people.threshold_img = 15;
 R_11.R_people.limit_flow = 1500;

@@ -3,7 +3,7 @@ R_all = [];
 R_all.check_2 = 0;
 
 file_number = '10A';
-start_frame = 1400;
+start_frame = 1590;
 fr = start_frame;
 
 R_9.R_people.check = 1;
@@ -65,7 +65,7 @@ if R_9.save_info
     save(R_9.file_save_info, 'R_9');
 end
 
-%% work with 5,11,13
+% %% work with 5,11,13
 % main_5_init;
 % R_11.R_bin.check = 1;
 % R_11.R_people.check = 1;
@@ -79,7 +79,7 @@ end
 % R_13.R_bin.check_del = 0;
 % R_13.R_people.check_del = 0;
 % 
-% R_11.start_frame = 1200;
+% R_11.start_frame = 1600;
 % 
 % main_11_init;
 % 
@@ -87,7 +87,7 @@ end
 % 
 % % loop
 % global debug_people;
-% debug_people = false;
+% debug_people = true;
 % debug_bin = false;
 % % R_11.R_bin.label = 1;
 % % R_11.R_people.label = 1;
@@ -95,7 +95,7 @@ end
 %    
 %     main_11_loop;
 %    
-%     main_13_loop;
+% %     main_13_loop;
 % %    R_11.current_frame  = R_11.current_frame  + 1;
 % end
 % 

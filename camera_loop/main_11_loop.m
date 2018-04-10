@@ -33,18 +33,17 @@ im_bins = im_c(R_11.R_bin.reg(3):R_11.R_bin.reg(4),R_11.R_bin.reg(1):R_11.R_bin.
 %
 im_b = im_bins;
 
-if R_11.R_bin.check > 0
-    if ~isempty(im_flow_all)
-        im_flow_bin = im_flow_all(R_11.R_bin.reg(3):R_11.R_bin.reg(4),R_11.R_bin.reg(1):R_11.R_bin.reg(2),:);
-        [R_11.R_bin, imb, event_bin] = bin_detection_tracking_11(im_b, im_flow_bin, R_11.R_bin);
-        
-        R_11.R_bin.check = R_11.R_bin.check + R_11.R_bin.check_del;
-        R_13.R_bin.check = R_13.R_bin.check - R_11.R_bin.check_del;
-    else
-        im_flow_bin = [];
-    end
-    
-end
+% if R_11.R_bin.check > 0
+%     if ~isempty(im_flow_all)
+%         im_flow_bin = im_flow_all(R_11.R_bin.reg(3):R_11.R_bin.reg(4),R_11.R_bin.reg(1):R_11.R_bin.reg(2),:);
+%         [R_11.R_bin, imb, event_bin] = bin_detection_tracking_11(im_b, im_flow_bin, R_11.R_bin);
+%         
+%         R_11.R_bin.check = R_11.R_bin.check + R_11.R_bin.check_del;
+%         R_13.R_bin.check = R_13.R_bin.check - R_11.R_bin.check_del;
+%     else
+%         im_flow_bin = [];
+%     end
+% end
 %% people tracking
 im_r = im_c(R_11.R_people.reg(3):R_11.R_people.reg(4),R_11.R_people.reg(1):R_11.R_people.reg(2),:); % people region
 % 
@@ -80,9 +79,9 @@ im = display_image_11(im_c, R_11);
 
 % im = cat(2, im, im_text);
 
-% figure(11);
-% imshow(im);
-% drawnow;
+figure(11);
+imshow(im);
+drawnow;
 
 %% concat event
 %     events = {};

@@ -20,8 +20,8 @@ im_closed = imclose(im_filtered,se);
 im_binary = logical(im_closed); %extract people region
 im_binary = imfill(im_binary, 'holes');
 
-% figure(1);
-% imshow(im_binary);
+ figure(111);
+ imshow(im_binary);
 %
 %  figure(3);
 %  imshow(im_flow);
