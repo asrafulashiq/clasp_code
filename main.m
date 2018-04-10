@@ -32,16 +32,11 @@ main_2_init;
 
 %%run 1 loop of 9
 while true
-    main_9_loop;  
+    main_9_loop;
+    
     % now check
-%     main_2_loop;
-    
-    fr = fr + 1;
-    
-    if fr==2000
-        
-        break;
-    end
+    main_2_loop;
+
 end
 %% save data
 if R_9.is_save_event
