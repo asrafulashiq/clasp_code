@@ -70,11 +70,10 @@ end
 im = display_image_11(im_c, R_11);
 
 %% pose detect and event
-[R_11.Event, event_pose] = poseEventDetection(im_c, R_11);
-
+% [R_11.Event, event_pose] = poseEventDetection(im_c, R_11);
 
 %% display pose
-im = display_pose(im, R_11);
+% im = display_pose(im, R_11);
 
 %% recent events
 % [im_text, R_11.recent_events] = display_event(R_11, size(im, 1));
@@ -86,22 +85,22 @@ im = display_pose(im, R_11);
 % drawnow;
 
 %% concat event
-    events = {};
-    for icounter = 1:numel(event_bin)
-        events{end+1} = event_bin{icounter};
-    end
-    for icounter = 1:numel(event_people)
-        events{end+1} = event_people{icounter};
-    end
-    for icounter = 1:numel(event_pose)
-        events{end+1} = event_pose{icounter};
-    end
-    R_11.event_struct{R_11.current_frame} = events;
-    
-    if R_11.is_save_frame 
-       fileofthis = fullfile(R_11.frame_save_folder, sprintf('%04d.jpg', R_11.current_frame));
-       imwrite(im, fileofthis); 
-    end
+%     events = {};
+%     for icounter = 1:numel(event_bin)
+%         events{end+1} = event_bin{icounter};
+%     end
+%     for icounter = 1:numel(event_people)
+%         events{end+1} = event_people{icounter};
+%     end
+%     for icounter = 1:numel(event_pose)
+%         events{end+1} = event_pose{icounter};
+%     end
+%     R_11.event_struct{R_11.current_frame} = events;
+%     
+%     if R_11.is_save_frame 
+%        fileofthis = fullfile(R_11.frame_save_folder, sprintf('%04d.jpg', R_11.current_frame));
+%        imwrite(im, fileofthis); 
+%     end
 
 %% increment frame
 R_11.current_frame = R_11.current_frame + 1;

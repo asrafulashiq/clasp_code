@@ -2,8 +2,8 @@
 R_all = [];
 R_all.check_2 = 0;
 
-file_number = '9A';
-start_frame = 320;
+file_number = '10A';
+start_frame = 1400;
 fr = start_frame;
 
 R_9.R_people.check = 1;
@@ -31,100 +31,100 @@ main_9_init;
 main_2_init;
 
 %%run 1 loop of 9
-while true
-    main_9_loop;
-    
-    % now check
-    main_2_loop;
-
-end
-%% save data
-if R_9.is_save_event
-    event_struct = R_9.event_struct;
-    save(R_9.event_save_file, 'event_struct');
-end
-
-if R_2.is_save_event
-    event_struct = R_2.event_struct;
-    save(R_2.event_save_file, 'event_struct');
-end
-
-if R_2.write
-    close(R_2.writer);
-end
-
-if R_2.save_info
-    save(R_2.file_save_info, 'R_2');
-end
-
-if R_9.write
-    close(R_9.writer);
-end
-
-if R_9.save_info
-    save(R_9.file_save_info, 'R_9');
-end
+% while true
+%     main_9_loop;
+%     
+%     % now check
+%     main_2_loop;
+% 
+% end
+% %% save data
+% if R_9.is_save_event
+%     event_struct = R_9.event_struct;
+%     save(R_9.event_save_file, 'event_struct');
+% end
+% 
+% if R_2.is_save_event
+%     event_struct = R_2.event_struct;
+%     save(R_2.event_save_file, 'event_struct');
+% end
+% 
+% if R_2.write
+%     close(R_2.writer);
+% end
+% 
+% if R_2.save_info
+%     save(R_2.file_save_info, 'R_2');
+% end
+% 
+% if R_9.write
+%     close(R_9.writer);
+% end
+% 
+% if R_9.save_info
+%     save(R_9.file_save_info, 'R_9');
+% end
 % 
 %% work with 5,11,13
-% main_5_init;
-% R_11.R_bin.check = 1;
-% R_11.R_people.check = 1;
-% 
-% R_13.R_bin.check = 0;
-% R_13.R_people.check = 0;
-% 
-% R_11.R_bin.check_del = 0;
-% R_11.R_people.check_del = 0;
-% 
-% R_13.R_bin.check_del = 0;
-% R_13.R_people.check_del = 0;
-% 
-% R_11.start_frame = 1200;
-% 
-% main_11_init;
-% 
-% main_13_init;
-% 
-% % loop
-% global debug_people;
-% debug_people = false;
-% debug_bin = false;
-% % R_11.R_bin.label = 1;
-% % R_11.R_people.label = 1;
-% while true
-%    
-%     main_11_loop;
-%    
-%     main_13_loop;
-% %    R_11.current_frame  = R_11.current_frame  + 1;
-% end
-% 
-% if R_11.is_save_event
-%     event_struct = R_11.event_struct;
-%     save(R_11.event_save_file, 'event_struct');
-% end
-% 
-% if R_13.is_save_event
-%     event_struct = R_13.event_struct;
-%     save(R_13.event_save_file, 'event_struct');
-% end
-% 
-% if R_11.write
-% %     close(R_11.writer1);
-% %     close(R_11.writer2);
-%     close(R_11.writer);
-% end
-% 
-% if R_11.save_info
-%     save(R_11.file_save_info, 'R_11');
-% end
-% 
-% if R_13.write
-%     close(R_13.writer);
-% end
-% 
-% if R_13.save_info
-%     save(R_13.file_save_info, 'R_13');
-% end
+main_5_init;
+R_11.R_bin.check = 1;
+R_11.R_people.check = 1;
+
+R_13.R_bin.check = 0;
+R_13.R_people.check = 0;
+
+R_11.R_bin.check_del = 0;
+R_11.R_people.check_del = 0;
+
+R_13.R_bin.check_del = 0;
+R_13.R_people.check_del = 0;
+
+R_11.start_frame = 1200;
+
+main_11_init;
+
+main_13_init;
+
+% loop
+global debug_people;
+debug_people = false;
+debug_bin = false;
+% R_11.R_bin.label = 1;
+% R_11.R_people.label = 1;
+while true
+   
+    main_11_loop;
+   
+    main_13_loop;
+%    R_11.current_frame  = R_11.current_frame  + 1;
+end
+
+if R_11.is_save_event
+    event_struct = R_11.event_struct;
+    save(R_11.event_save_file, 'event_struct');
+end
+
+if R_13.is_save_event
+    event_struct = R_13.event_struct;
+    save(R_13.event_save_file, 'event_struct');
+end
+
+if R_11.write
+%     close(R_11.writer1);
+%     close(R_11.writer2);
+    close(R_11.writer);
+end
+
+if R_11.save_info
+    save(R_11.file_save_info, 'R_11');
+end
+
+if R_13.write
+    close(R_13.writer);
+end
+
+if R_13.save_info
+    save(R_13.file_save_info, 'R_13');
+end
 
 
