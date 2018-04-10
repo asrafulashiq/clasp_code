@@ -51,19 +51,13 @@ if R_9.current_frame <= R_9.end_frame
     
     
     %% display image
-    %display_image_bin(im_b, R_9);
-    %im = display_image_people(im_r, R_9);
-    
+
     im = display_image(im_c, R_9);
-    
-%     [im_text, R_9.recent_events] = display_event(R_9, size(im, 1));
-    
-%     im = cat(2, im, im_text);
-    
+  
     figure(9);
     imshow(im);
     
-    %% concat event
+    %% concat event info
     events = {};
     for icounter = 1:numel(event_bin)
         events{end+1} = event_bin{icounter};

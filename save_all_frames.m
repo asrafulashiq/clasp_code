@@ -19,11 +19,11 @@ for file_number_str = all_file_nums
     
     for camera = all_cameras
     
-        % camera mp4 file
+        % source : camera mp4 file
         filename = fullfile('..',file_number, sprintf('camera%d.mp4', camera));
         
-        % path to save frames
-        basename = fullfile('..','all_videos',file_number, int2str(camera));
+        % destination : path to save frames
+        basename = fullfile('E:\shared_folder\all_videos',file_number, int2str(camera));
         
         v = VideoReader(filename);
         
